@@ -13,7 +13,15 @@
   compares 7 and 1, swaps them
   [2,4,1,7]
   repeats the process until the list is sorted
-  [1,2,4,7]*/
+  [1,2,4,7]
+  
+  
+| Case                                          | Time Complexity |
+| --------------------------------------------- | --------------- |
+| Best Case (already sorted, optimized version) |   O(n)          |
+| Average Case                                  |   O(n²)         |
+| Worst Case                                    |   O(n²)         |
+*/
 #include <iostream> 
 using namespace std;
 int main()
