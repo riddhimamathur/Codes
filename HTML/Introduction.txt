@@ -1,0 +1,13 @@
+HTML
+HYPERTEXT MARKUP LANGUAGE 
+
+    1) Most basic building block of the web
+    2) Allows you to add/change website content 
+
+Useful for web developers, software developers, marketing professionals, sales,
+            business owners, freelancers, cv purpose.
+    
+HTML - STRUCTURE OF THE HOUSE
+CSS - APPEARANCE AND DESIGN OF THE HOUSE
+JS - FUNCTIONALITY OF THE HOUSE 
+
