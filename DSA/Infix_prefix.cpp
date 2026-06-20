@@ -74,4 +74,3 @@ int main()
     convert(infix);
     return 0;
 }
-
