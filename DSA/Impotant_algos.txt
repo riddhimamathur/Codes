@@ -1,0 +1,113 @@
+Tree Algorithms (Most Important)
+Level 1 (Basic)
+1. Tree Traversals
+Preorder Traversal
+Inorder Traversal
+Postorder Traversal
+Level Order Traversal (BFS)
+
+Practice Questions
+Print preorder traversal.
+Print inorder traversal.
+Print postorder traversal.
+Print level order traversal.
+Print nodes level by level.
+Reverse level order traversal.
+Spiral order traversal.
+Zig-Zag traversal.
+
+Level 2 (Counting Problems)
+Practice
+Count total nodes.
+Count leaf nodes.
+Count internal nodes.
+Count nodes having one child.
+Count nodes having two children.
+Count even valued nodes.
+Count odd valued nodes.
+Count nodes greater than X.
+Count nodes between L and R.
+Count nodes at Kth level.
+
+Level 3 (Height Based)
+Practice
+Height of tree
+Maximum depth
+Minimum depth
+Diameter of tree
+Width of tree
+Maximum width
+Deepest node
+Height of every node
+
+Level 4 (Searching)
+Practice
+Search X in Binary Tree
+Search X in BST
+Find minimum
+Find maximum
+Find predecessor
+Find successor
+Find closest value
+
+Level 5 (Binary Search Tree Algorithms)
+Practice
+Insert node
+Delete node
+Search node
+Validate BST
+Balance BST
+Convert Sorted Array to BST
+Convert BST to Sorted Array
+Find kth smallest
+Find kth largest
+
+Level 6 (Path Algorithms)
+Practice
+Root to Leaf paths
+Root to Node path
+Longest path
+Shortest path
+Maximum root to leaf sum
+Minimum root to leaf sum
+Print all paths
+Count all paths
+
+Level 7 (Lowest Common Ancestor)
+Practice
+LCA in Binary Tree
+LCA in BST
+Distance between two nodes
+Print path between two nodes
+
+Level 8 (View Algorithms)
+Practice
+Left View
+Right View
+Top View
+Bottom View
+Vertical Order
+Boundary Traversal
+Diagonal Traversal
+
+Level 9 (Tree Transformations)
+Practice
+Mirror Tree
+Invert Tree
+Clone Tree
+Flatten Binary Tree
+Convert to Sum Tree
+Convert to Mirror Tree
+Serialize Tree
+Deserialize Tree
+
+
+Level 10 (Property Checking)
+Practice
+Check Balanced Tree
+Check Complete Binary Tree
+Check Perfect Binary Tree
+Check Full Binary Tree
+Check Symmetric Tree
+Check Identical Trees
+Check Isomorphic Trees
