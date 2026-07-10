@@ -14,7 +14,6 @@ Print level order traversal.
 Print nodes level by level.
 Reverse level order traversal.
 Spiral order traversal.
-Zig-Zag traversal.
 
 Level 2 (Counting Problems)
 Practice
