@@ -1,4 +1,6 @@
 //undirected graphs using dfs only 
+#include <bits/stdc++.h>
+using namespace std;
 
 class Solution {
 public:
@@ -33,3 +35,28 @@ public:
         return false;
     }
 };
+
+int main() {
+    int V = 5; // number of vertices
+    vector<int> adj[V];
+
+    adj[0].push_back(1);
+    adj[1].push_back(0);
+
+    adj[1].push_back(2);
+    adj[2].push_back(1);
+
+    adj[2].push_back(3);
+    adj[3].push_back(2);
+
+    adj[3].push_back(0);
+    adj[0].push_back(3);
+
+    Solution sol;
+    if (sol.isCycle(V, adj))
+        cout << "Cycle Found" << endl;
+    else
+        cout << "No Cycle" << endl;
+
+    return 0;
+}

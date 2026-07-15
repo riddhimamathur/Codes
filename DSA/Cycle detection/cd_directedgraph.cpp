@@ -28,7 +28,8 @@ bool isCyclic(vector<vector<int>>& adj) {
     return false;
 }
 
-int main() {
+int main() 
+{
     vector<vector<int>> adj = {{1}, {2}, {0, 3}, {}};
     cout << (isCyclic(adj) ? "Cycle Found" : "No Cycle") << endl;
 }
