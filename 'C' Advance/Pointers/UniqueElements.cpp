@@ -9,15 +9,11 @@ int main() {
     cout << "Unique elements: ";
     for (int i = 0; i < n; i++) {
         bool isDuplicate = false;
-
-        // बाकी elements से compare करो
         for (int j = 0; j < n; j++) {
             if (i != j && *(p+i) == *(p+j)) {
                 isDuplicate = true;
                 break;
-            }
-        }
-
+            } }
         if (!isDuplicate) {
             cout << *(p+i) << " ";
         }
