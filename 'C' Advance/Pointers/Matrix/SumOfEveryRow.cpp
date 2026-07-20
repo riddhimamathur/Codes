@@ -6,23 +6,24 @@ int main() {
     cout << "Enter rows and columns: ";
     cin >> m >> n;
 
-    int matrix[m][n];
+    int *ptr = new int[m*n];   // 1D pointer for matrix
+
     cout << "Enter " << m*n << " elements:\n";
-    for(int i=0; i<m; i++) 
-    {
-        for(int j=0; j<n; j++)
-         {
-            cin >> matrix[i][j];
+    for(int i=0; i<m; i++) {
+        for(int j=0; j<n; j++) {
+            cin >> *(ptr + i*n + j);   // pointer arithmetic for input
         }
     }
 
-    for(int i=0; i<m; i++)
-     {
+    // Row sums
+    for(int i=0; i<m; i++) {
         int rowSum = 0;
-        for(int j=0; j<n; j++) 
-        {
-            rowSum += matrix[i][j];
+        for(int j=0; j<n; j++) {
+            rowSum += *(ptr + i*n + j);   // ith row, jth column
         }
         cout << "Sum of row " << i+1 << " = " << rowSum << endl;
     }
+
+    delete[] ptr;
 }
+
