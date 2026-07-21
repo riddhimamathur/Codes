@@ -27,6 +27,5 @@ int main() {
     cout << "\nMain diagonal sum = " << Sum1;
     cout << "\nSecondary diagonal sum = " << Sum2;
     cout << "\nDifference = " << Sum1 - Sum2 << endl;
-
-    delete[] A;
 }
+
