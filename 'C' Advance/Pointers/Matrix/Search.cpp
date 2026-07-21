@@ -28,6 +28,5 @@ int main() {
     }
 
     if(!found) cout << "Element not found!\n";
-
-    delete[] ptr;
+return 0;
 }

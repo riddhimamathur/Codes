@@ -25,6 +25,5 @@ int main() {
     }
 
     cout << "Occurrences of " << key << " = " << count << endl;
-
-    delete[] ptr;
+return 0;
 }

@@ -22,7 +22,5 @@ int main() {
             colSum += *(ptr + i*n + j);   // ith row, jth column
         }
         cout << "Sum of column " << j+1 << " = " << colSum << endl;
-    }
-
-    delete[] ptr;
+    } return 0;
 }

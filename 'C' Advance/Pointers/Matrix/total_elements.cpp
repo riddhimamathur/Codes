@@ -19,6 +19,6 @@ while (ptr < q + m*n)
         ptr++;
     }
     cout << "\nTOTAL NUMBER OF ELEMENTS : " << count;
-    delete[] q; // Free the allocated memory
+  
     return 0;
 }
