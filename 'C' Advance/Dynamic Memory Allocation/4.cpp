@@ -1,3 +1,10 @@
+/*
+
+Allocate memory for two arrays.
+Merge them into a third dynamically allocated array using malloc().
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
