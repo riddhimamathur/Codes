@@ -1,3 +1,7 @@
+/*Create an array using calloc().
+Find the largest and second largest elements.
+Free the memory.*/
+
 #include <stdio.h>
 #include <stdlib.h>
 int main()
