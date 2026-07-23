@@ -1,3 +1,9 @@
+/*Create an integer array of size N using malloc().
+Input N from the user.
+Store only even numbers.
+Print the array in reverse using pointer arithmetic.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

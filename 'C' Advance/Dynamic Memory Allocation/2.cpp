@@ -1,3 +1,8 @@
+/*
+Allocate memory for a character string.
+Input a sentence.
+Count vowels without using array indexing ([]).*/
+
 #include <iostream>
 #include <cstdlib>   
 #include <cctype>   
