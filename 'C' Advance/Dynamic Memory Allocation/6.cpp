@@ -1,3 +1,9 @@
+/*
+Initially allocate space for 5 integers.
+Whenever the array becomes full,
+increase its size by 5 using realloc() until the user enters -1.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
