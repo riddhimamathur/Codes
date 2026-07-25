@@ -1,3 +1,6 @@
+/*Q14.Store product details.
+Delete one product and resize memory.*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

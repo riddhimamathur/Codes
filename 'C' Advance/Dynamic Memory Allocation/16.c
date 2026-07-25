@@ -1,3 +1,11 @@
+
+/*Q16.Create an m × n matrix using pointers.
+
+Find :-
+Row sum
+Column sum
+Diagonal sum*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
