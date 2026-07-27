@@ -1,3 +1,6 @@
+/* Allocate memory for books.
+Search a book by name. */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,7 +10,6 @@ struct Book {
     char name[50];
     float price;
 };
-
 int main() {
     int n;
     printf("Enter number of books: ");
