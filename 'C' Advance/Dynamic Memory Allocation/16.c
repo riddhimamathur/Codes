@@ -1,5 +1,5 @@
 
-/*Q16.Create an m × n matrix using pointers.
+/*Create an m × n matrix using pointers.
 
 Find :-
 Row sum
