@@ -21,13 +21,14 @@ void unite(int a, int b) {
 }
 
 int main() {
-    int V = 4;
+ int V = 5;
     vector<Edge> edges = {
-        {0, 1, 10},
-        {0, 2, 6},
-        {0, 3, 5},
-        {1, 3, 15},
-        {2, 3, 4}
+        {0, 1, 2},
+        {0, 3, 6},
+        {1, 2, 3},
+        {1, 3, 8},
+        {1, 4, 5},
+        {2, 4, 7}
     };
 
     for (int i = 0; i < V; i++) parent[i] = i;
