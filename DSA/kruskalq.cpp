@@ -3,8 +3,6 @@
 #include <algorithm>
 
 using namespace std;
-
-// DSU with Path Compression + Union by Rank
 class DSU {
     vector<int> parent, rank;
 public:
@@ -16,14 +14,14 @@ public:
 
     int find(int x) {
         if (parent[x] != x)
-            parent[x] = find(parent[x]); // Path Compression
+            parent[x] = find(parent[x]); 
         return parent[x];
     }
 
     bool unite(int x, int y) {
         int px = find(x);
         int py = find(y);
-        if (px == py) return false; // cycle detected
+        if (px == py) return false;
 
         if (rank[px] < rank[py]) parent[px] = py;
         else if (rank[px] > rank[py]) parent[py] = px;
@@ -53,7 +51,7 @@ int main() {
         {2, 4, 7}
     };
 
-    sort(edges.begin(), edges.end()); // sort by weight
+    sort(edges.begin(), edges.end()); 
 
     DSU dsu(V);
     int mst_cost = 0;
