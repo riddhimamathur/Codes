@@ -1,3 +1,51 @@
+/*Brute Force Approach
+
+Idea: Check every possible pair in the array.
+
+Steps:
+
+Loop through each element i.
+
+For each i, loop through every element j > i.
+
+Check if arr[i] + arr[j] == target.
+
+If yes → return the pair.
+
+If no pair found after all checks → return none.
+------------------------------------------------------
+💻 C++ Code (Brute Force Pair Sum)
+cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {2, 7, 11, 15};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int target = 9;
+
+    bool found = false;
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] + arr[j] == target) {
+                cout << "Pair found: " << arr[i] << " + " << arr[j] << " = " << target << endl;
+                found = true;
+            }
+        }
+    }
+    if (!found) {
+        cout << "No pair found!" << endl;
+    }
+    return 0;
+}
+📊 Complexity
+Time Complexity: 
+𝑂(n square) because we check all pairs.
+
+Space Complexity: 
+𝑂 (1)
+ (no extra data structures).*/
+ 
 #include <iostream>
 #include <vector>
 using namespace std;
