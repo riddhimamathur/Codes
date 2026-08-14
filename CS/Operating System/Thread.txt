@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <pthread.h>
+void *task(void *arg)
+{
+    printf("\nThread is Running");
+    return NULL; // thread function complete hone ke baad NULL return karna jaruri hai.
+    
+}
+int main()
+{
+    pthread_t thread; // yeh ek thread identifire hai / thread handle kah sakte hain. (thread ko identify karne wala variable)
+    
+    pthread_create(&thread,NULL,task,NULL); // thread ka naam, attributes, thread function, arguments (thread function ke arguments)
+    pthread_join(thread,NULL); // main thread, newely created thread ke complete hone ka wait karega, or uske baad join karega.
+    printf("Main Thread is Finished");
+    
+        return 0;
+}
+
+/*
+    Code Explainations : - 
+    3. yeh ek thread function hai. jab bhi ek thread create hota hai, to usko ek function diya jaata hai, 
+    jo thread ko execute karta hai.
+    method ka naam diya - task
+    void * - yeh sthread function ka humesha ek standard format hota hai. 
+    void * function_name(void *arg) - Thread ka input hai (ar)
+    ki yeh function kisi bhi tarah ki value le sakta hai, or kisis bhi tarah ki value humain de sakta hai.
+    
+*/

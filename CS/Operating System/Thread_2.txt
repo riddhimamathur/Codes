@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <pthread.h>
+int a = 10;
+int b = 20;
+void *calculate_sum(void *arg)
+{
+    int sum = a+b;
+    printf("\nSum is : %d",sum);
+    return NULL;
+}
+void *calculate_sub(void *arg)
+{
+   int sub = a-b;
+   printf("\nSub is : %d",sub);
+   return NULL;
+}
+int main()
+{
+    pthread_t t1,t2;
+    pthread_create(&t1,NULL,calculate_sum,NULL);
+    pthread_create(&t2,NULL,calculate_sub,NULL);
+    
+    pthread_join(t1,NULL);
+    pthread_join(t2,NULL);
+    printf("\nMain Thread Finished");
+    return 0;
+}
