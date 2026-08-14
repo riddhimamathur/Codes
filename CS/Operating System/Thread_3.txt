@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <pthread.h>
+int a = 10;
+int b = 20;
+void *display(void *arg)
+{
+    int number = *(int *)arg;
+    printf("\nNumber is : %d",number);
+    return NULL;
+}
+int main()
+{
+    pthread_t t1,t2,t3;
+    int a = 12;
+    int b = 43;
+    int c = 40;
+    pthread_create(&t1,NULL,display,&a);
+    pthread_create(&t2,NULL,display,&b);
+    pthread_create(&t3,NULL,display,&c);
+    
+    pthread_join(t1,NULL);
+    pthread_join(t2,NULL);
+    pthread_join(t3,NULL);
+    return 0;
+}
