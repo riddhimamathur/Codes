@@ -8,7 +8,7 @@ void *task(void *arg)
 }
 int main()
 {
-    pthread_t thread; // yeh ek thread identifire hai / thread handle kah sakte hain. (thread ko identify karne wala variable)
+    pthread_t thread; // yeh ek thread identifier hai / thread handle kah sakte hain. (thread ko identify karne wala variable)
     
     pthread_create(&thread,NULL,task,NULL); // thread ka naam, attributes, thread function, arguments (thread function ke arguments)
     pthread_join(thread,NULL); // main thread, newely created thread ke complete hone ka wait karega, or uske baad join karega.
