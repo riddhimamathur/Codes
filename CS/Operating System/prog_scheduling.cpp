@@ -31,7 +31,6 @@ int main() {
         current_time = ct[i]; 
     }
 
-    // Output Table
     cout << "\nID\tAT\tBT\tCT\tTAT\tWT\n";
     for (int i = 0; i < n; i++) {
         cout << id[i] << "\t" << at[i] << "\t" << bt[i] << "\t"
@@ -42,4 +41,5 @@ int main() {
     cout << "\nAverage Waiting Time = " << total_wt / n << endl;
 
     return 0;
+
 }
