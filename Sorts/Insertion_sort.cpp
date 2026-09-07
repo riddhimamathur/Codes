@@ -38,10 +38,17 @@ and low memory usage.
 using namespace std;
 int main()
 {
-    int a[] = {5,3,4,1};
-    int n = 4;
+    int n,i;
+    int a[n];
+    cout <<"\nEnter the number of elements : ";
+    cin >> n;
+    cout <<"\nEnter the elements : ";
+    for (i=0;i<n;i++)
+{
+    cin >> a[i];
+}
     // Insertion Sort
-    for(int i=1;i<n;i++)
+    for(i=1;i<n;i++)
     {
         int key = a[i];
         int j = i-1;
@@ -56,7 +63,7 @@ int main()
         // insert karange
         a[j+1] = key;
     }
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
         cout<<a[i]<<endl;
     }
