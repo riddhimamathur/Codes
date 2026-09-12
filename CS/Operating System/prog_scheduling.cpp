@@ -8,7 +8,7 @@ int main() {
     cin >> n;
 
     int id[50], at[50], bt[50], ct[50], tat[50], wt[50];
-    float total_tat = 0, total_wt = 0;
+    float total_tat = 0, total_wt = 0; s
     for (int i = 0; i < n; i++) {
         cout << "\nEnter Process ID: ";
         cin >> id[i];
