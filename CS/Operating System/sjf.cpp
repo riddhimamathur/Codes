@@ -1,4 +1,5 @@
 //SJF IN NON PREEMPTIVE 
+
 #include <iostream>
 using namespace std;
 
@@ -27,7 +28,7 @@ void SJF(int n, int at[], int bt[]) {
         if (shortest == -1) {
             currentTime++;
         }
-
+ 
         else {
             currentTime = currentTime + bt[shortest];
 
@@ -65,11 +66,10 @@ int main() {
     int at[n], bt[n];
 
     for (int i = 0; i < n; i++) {
+        cout << "\nEnter Arrival Time of P" << i + 1 << ": ";
+        cin >> at[i] ;
 
-        cout << "Enter Arrival Time of P" << i + 1 << ": ";
-        cin >> at[i];
-
-        cout << "Enter Burst Time of P" << i + 1 << ": ";
+        cout << "\nEnter Burst Time of P" << i + 1 << ": ";
         cin >> bt[i];
     }
 
