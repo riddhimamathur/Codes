@@ -64,12 +64,14 @@ int main()
     int stack[n];
 
     push(stack, 23);
+    push(stack, 27);
     push(stack, 31);
-    push(stack, 29);
+    push(stack, 25);
 
     display(stack);
 
     pop(stack);
+     pop(stack);
     peep(stack);
     display(stack);
 
