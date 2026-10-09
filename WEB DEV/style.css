@@ -1,15 +1,12 @@
-
-/* style.css */
-
 body {
-    background-color: rgb(204, 185, 251);
-    font-family: Arial, sans-serif;
+    background-color: rgb(177, 206, 236);
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin-top: 100px;
 }
 
 h1 {
-    color: rgb(240, 37, 37);
+    color: rgb(253, 253, 135);
     font-size: 40px;
 }
 
