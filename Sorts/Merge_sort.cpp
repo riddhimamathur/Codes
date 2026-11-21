@@ -50,84 +50,98 @@ Requires additional memory space for merging.
         3. hum keval merge karte jaate hain.
 
 */
-#include <iostream>
-using namespace std;
-void mergee(int a[],int left, int mid, int right)
-{
-    // left = 0, mid = 0, right = 1
-    int n1 = mid-left+1; //1
-    int n2 = right - mid; // 1
 
-    //temp arrays
-    int L[n1],R[n2];
-    
-    //copy data
-    for(int i=0;i<n1;i++)
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+void merge(vector<int>& a, int left, int mid, int right)
+{
+    vector<int> temp;
+
+    int i = left;
+    int j = mid + 1;
+
+    while(i <= mid && j <= right)
     {
-        L[i] = a[left+i];
-    }
-    for(int j=0;j<n2;j++)
-    {
-        R[j] = a[mid+1+j];
-    }
-    //merge logic
-    int i=0, j=0,k = left;
-    while(i<n1 && j<n2)
-    {
-        if(L[i]<=R[j])
+        if(a[i] <= a[j])
         {
-            a[k] = L[i];
+            temp.push_back(a[i]);
             i++;
         }
-        else 
+        else
         {
-            a[k] = R[j];
+            temp.push_back(a[j]);
             j++;
         }
-        k++;
-    }
-    //remaining Elements ko copy karange.
-    while(i<n1 )
-    {
-        a[k] = L[i];
-        i++;
-        k++;
-    }
-    while(j<n2)
-    {
-        a[k] = R[j];
-        j++;
-        k++;
     }
 
-}
-void merge(int a[], int n)
-{
-    for(int i=1;i<n;i=i*2)
+    while(i <= mid)
     {
-        //left side
-        for(int j=0;j<n-1;j=j+2*i)
+        temp.push_back(a[i]);
+        i++;
+    }
+
+    while(j <= right)
+    {
+        temp.push_back(a[j]);
+        j++;
+    }
+
+    for(int k = 0; k < temp.size(); k++)
+    {
+        a[left + k] = temp[k];
+    }
+}
+
+void merge_1(vector<int>& a, int n)
+{
+    for(int i = 1; i < n; i = i * 2)
+    {
+        for(int j = 0; j < n - 1; j = j + 2 * i)
         {
-            int mid = min(j+i-1,n-1);
-            int right_end = min(j+2*i-1,n-1);
-            mergee(a,j,mid,right_end);
+            int mid = min(j + i - 1, n - 1);
+            int right = min(j + 2 * i - 1, n - 1);
+
+            if(mid < right)
+            {
+                merge(a, j, mid, right);
+            }
         }
     }
 }
-void print(int a[], int n)
-{
-    for(int i=0;i<n;i++)
-    {
-        cout<<"\n"<<a[i];
-    }
-}
+
 int main()
 {
-    int a[] = {8,3,5,2,9,1};
-    int n = sizeof(a) / sizeof(a[0]);
-    merge(a,n);
-    cout<<"\nSorted Array : ";
-    print(a,n);
-    return 0;
+    int n;
 
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    if(n <= 0)
+    {
+        cout << "Invalid size";
+        return 0;
+    }
+
+    vector<int> a(n);
+
+    cout << "Enter array elements: ";
+
+    for(int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+
+    merge_1(a, n);
+
+    cout << "Sorted Array: ";
+
+    for(int i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+
+    return 0;
 }
